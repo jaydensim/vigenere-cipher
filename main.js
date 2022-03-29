@@ -28,7 +28,7 @@ const app = new Proxy(
       qa(".app-functional--navy-button-validityPending").forEach(
         (el) => (el.disabled = !obj.currentvalidity)
       );
-      if ((prop = "status")) {
+      if (prop == "status") {
         clearTimeout(statusTimeout);
         df("status").innerHTML = obj.status;
         statusTimeout = setTimeout(() => {
